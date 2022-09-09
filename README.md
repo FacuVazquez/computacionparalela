@@ -1,1 +1,2 @@
-# computacionparalela
+# Computacion Paralela
+## Trabajos Prácticos
