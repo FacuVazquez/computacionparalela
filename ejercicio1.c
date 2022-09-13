@@ -6,7 +6,6 @@
 
 int compartida = 0;
 
-const char *mensaje[2] = {"Thread1 instancia x", "Thread2 instancia y"};
 
 void *threadType1(void *arg){
         int r = rand() % 200000;
@@ -80,7 +79,7 @@ void threadFunction(int n, int m) {
         pthread_join(h2,NULL);
         
         // create_threadType1(n);
-        //create_threadType2(m);
+        // create_threadType2(m);
 }
 
 
