@@ -36,7 +36,7 @@ void *create_threadType1(void *args){
         pthread_t t1[n-1];
         int i;
         for(i=0;i<n;i++){
-                pthread_create(&t1[i],NULL,threadType1,(void *)&i);
+                pthread_create(t1+i,NULL,threadType1,(void *)&i);
         }
 
         int r = rand() % 200000;
@@ -56,7 +56,7 @@ void *create_threadType2(void *args){
         pthread_t t2[m-1];
         int i;
         for(i=0;i<m;i++){
-                pthread_create(&t2[i],NULL,threadType2,(void *)&i);
+                pthread_create(t2+i,NULL,threadType2,(void *)&i);
         }
 
         int r = rand() % 200000;
@@ -77,7 +77,6 @@ void threadFunction(int n, int m) {
         pthread_create(&h2, NULL, create_threadType2, (void *)&m);
         pthread_join(h1,NULL);
         pthread_join(h2,NULL);
-        threadType2(m);
 }
 
 

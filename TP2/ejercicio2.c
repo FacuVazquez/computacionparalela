@@ -20,7 +20,6 @@ La funcionalidad de los threads es la siguiente:
 int compartida = 0;
 
 int create_processType1(int n){
-    // printf("Esto es n %d \n",n);
         int i;
         for(i=0;i<n;i++){
             printf("Proceso tipo 1 %d \n",i);
@@ -28,14 +27,12 @@ int create_processType1(int n){
             // TODO: Ver el PID del proceso si es 0 meter el codigo para que haga el hijo 
             compartida++;
             exit(0);
-            // return 0;
             }
         }
 
 }
 
 int create_processType2(int m){
-    // printf("Esto es m %d \n",m);
         int i;
         for(i=0;i<m;i++){
             printf("Proceso tipo 2 %d\n",i);
@@ -43,13 +40,11 @@ int create_processType2(int m){
             // TODO: Ver el PID del proceso si es 0 meter el codigo para que haga el hijo 
             printf("compartida: %d\n",compartida);
             exit(0);
-            // return 0;
             }
         }
 }
 
 void processFunction(int n,int m){
-    // printf("Esto es n %d y m %d \n",n,m);
     create_processType1(n);
     create_processType2(m);
 }
